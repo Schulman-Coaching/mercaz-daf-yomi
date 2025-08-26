@@ -1,0 +1,19 @@
+{
+  "completed_videos": [
+    "7FMnwXERr9o",
+    "uN_xaP3zqDw",
+    "xqGzgIQLtxc",
+    "PcfXC1O-60E",
+    "XPVpPy2tHIQ",
+    "WjB20tZpYhY",
+    "9VVgWWjSb_U"
+  ],
+  "failed_videos": [
+    "7hZcxAW0j0M",
+    "-mdS0gBS7xM",
+    "VQYeRVwggWU"
+  ],
+  "last_batch": 1,
+  "total_processed": 7,
+  "start_time": "2025-08-26T10:40:10.853549"
+}

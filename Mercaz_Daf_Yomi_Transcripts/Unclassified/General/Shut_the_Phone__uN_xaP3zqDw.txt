@@ -1,0 +1,139 @@
+Title: Shut the Phone 📱❌
+Video ID: uN_xaP3zqDw
+URL: https://www.youtube.com/watch?v=uN_xaP3zqDw
+Published: 2025-08-25T12:10:06Z
+Tractate: Unclassified
+Series: General
+Transcript Type: auto-generated
+Language: en
+Word Count: 175
+Duration Covered: 46.1 seconds
+--------------------------------------------------------------------------------
+
+Let's say you're in the middle of learning. You start learning the soy. What happens? You get a ding ding. What's the first thing you do? So, I don't know what happens in the brain. I once read about it. There's endorphins and you got a message. You got to see what it is. It's a good It's a email. It's an important email. So, you right away take a look. Well, there's a WhatsApp. You take a look at the WhatsApp. Kaz says, "Imagine if a person wants to make a overnight soup. You have to leave it on the flame for 24 hours. What if every 20 minutes you turn off the fire for 20 minutes?" you had 24 hours of fire. It's nothing. Nothing's going to happen to the soup. Says that if you learn tyro and every six minutes you look at your phone and WhatsApp, he says he says in WhatsApp, email, so it doesn't work as well. Idea is to shut off your phone for a little bit and
+
+================================================================================
+STRUCTURED TRANSCRIPT DATA (JSON)
+================================================================================
+[
+  {
+    "text": "Let's say you're in the middle of",
+    "start": 0.08,
+    "duration": 2.64
+  },
+  {
+    "text": "learning. You start learning the soy.",
+    "start": 0.96,
+    "duration": 3.839
+  },
+  {
+    "text": "What happens? You get a ding ding.",
+    "start": 2.72,
+    "duration": 3.44
+  },
+  {
+    "text": "What's the first thing you do? So, I",
+    "start": 4.799,
+    "duration": 2.48
+  },
+  {
+    "text": "don't know what happens in the brain. I",
+    "start": 6.16,
+    "duration": 3.04
+  },
+  {
+    "text": "once read about it. There's endorphins",
+    "start": 7.279,
+    "duration": 3.841
+  },
+  {
+    "text": "and you got a message. You got to see",
+    "start": 9.2,
+    "duration": 3.28
+  },
+  {
+    "text": "what it is. It's a good It's a email.",
+    "start": 11.12,
+    "duration": 2.559
+  },
+  {
+    "text": "It's an important email. So, you right",
+    "start": 12.48,
+    "duration": 2.4
+  },
+  {
+    "text": "away take a look. Well, there's a",
+    "start": 13.679,
+    "duration": 2.881
+  },
+  {
+    "text": "WhatsApp. You take a look at the",
+    "start": 14.88,
+    "duration": 4.319
+  },
+  {
+    "text": "WhatsApp. Kaz says, \"Imagine if a person",
+    "start": 16.56,
+    "duration": 5.44
+  },
+  {
+    "text": "wants to make a overnight soup. You have",
+    "start": 19.199,
+    "duration": 4.961
+  },
+  {
+    "text": "to leave it on the flame for 24 hours.",
+    "start": 22.0,
+    "duration": 4.4
+  },
+  {
+    "text": "What if every 20 minutes you turn off",
+    "start": 24.16,
+    "duration": 4.16
+  },
+  {
+    "text": "the fire for 20 minutes?\"",
+    "start": 26.4,
+    "duration": 4.16
+  },
+  {
+    "text": "you had 24 hours of fire. It's nothing.",
+    "start": 28.32,
+    "duration": 3.279
+  },
+  {
+    "text": "Nothing's going to happen to the soup.",
+    "start": 30.56,
+    "duration": 3.28
+  },
+  {
+    "text": "Says that if you learn tyro and every",
+    "start": 31.599,
+    "duration": 4.001
+  },
+  {
+    "text": "six minutes you look at your phone and",
+    "start": 33.84,
+    "duration": 4.32
+  },
+  {
+    "text": "WhatsApp, he says he says in WhatsApp,",
+    "start": 35.6,
+    "duration": 4.56
+  },
+  {
+    "text": "email,",
+    "start": 38.16,
+    "duration": 4.399
+  },
+  {
+    "text": "so it doesn't work as well. Idea is to",
+    "start": 40.16,
+    "duration": 5.919
+  },
+  {
+    "text": "shut off your phone for a little bit and",
+    "start": 42.559,
+    "duration": 3.52
+  }
+]

@@ -354,52 +354,54 @@ class MercazDafYomiExtractor:
         }
         
         try:
-            # Get available transcripts
-            transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
+            # Create API instance
+            api = YouTubeTranscriptApi()
             
-            # Priority order for transcript languages
-            language_priorities = ['en', 'en-US', 'en-GB', 'he', 'iw']
-            transcript = None
+            # Priority order: Hebrew first (this is a Hebrew channel), then English
+            language_priorities = ['iw', 'he', 'en', 'en-US', 'en-GB']
+            fetched_transcript = None
             
-            # Try to get preferred language transcript
+            # Try to get transcript for each preferred language
             for lang in language_priorities:
                 try:
-                    transcript = transcript_list.find_transcript([lang])
+                    fetched_transcript = api.fetch(video_id, languages=[lang])
                     result['language'] = lang
                     break
-                except:
+                except Exception as e:
+                    # Log specific language failures for debugging
+                    self.logger.debug(f"Language {lang} failed for {video_id}: {e}")
                     continue
             
-            # If no preferred language found, get first available
-            if not transcript:
+            # If no specific language worked, try without language specification
+            if not fetched_transcript:
                 try:
-                    available_transcripts = list(transcript_list)
-                    if available_transcripts:
-                        transcript = available_transcripts[0]
-                        result['language'] = transcript.language_code
-                except:
-                    pass
+                    fetched_transcript = api.fetch(video_id)  # Get any available transcript
+                    result['language'] = 'auto-detected'
+                except Exception as e:
+                    result['error'] = f"No transcripts available: {str(e)}"
+                    return None, None, result
             
-            if not transcript:
-                result['error'] = "No transcripts available"
-                return None, None, result
-            
-            # Determine transcript type
-            result['transcript_type'] = 'manual' if not transcript.is_generated else 'auto-generated'
-            
-            # Fetch the transcript data
-            transcript_data = transcript.fetch()
-            
-            if not transcript_data:
+            if not fetched_transcript:
                 result['error'] = "Empty transcript data"
                 return None, None, result
             
-            # Convert to plain text
+            # Convert FetchedTranscript to list of dicts and plain text
+            transcript_data = []
             full_text = ""
-            for entry in transcript_data:
-                full_text += entry['text'] + " "
+            
+            for snippet in fetched_transcript:
+                entry = {
+                    'text': snippet.text,
+                    'start': snippet.start,
+                    'duration': snippet.duration
+                }
+                transcript_data.append(entry)
+                full_text += snippet.text + " "
             
             full_text = full_text.strip()
+            
+            # Determine transcript type (assume auto-generated for now)
+            result['transcript_type'] = 'auto-generated'
             
             # Update result metadata
             result['success'] = True
