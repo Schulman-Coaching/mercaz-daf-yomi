@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Transcript Extractor Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__title">YouTube Transcript Extractor Demo</h1>
+            <p class="header__subtitle">Learn how to extract transcripts from YouTube videos</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="input-section card">
+                <div class="card__body">
+                    <h2>Add YouTube Videos</h2>
+                    <div class="form-group">
+                        <label for="youtube-url" class="form-label">YouTube URL or Playlist URL</label>
+                        <input type="url" id="youtube-url" class="form-control" placeholder="https://youtube.com/watch?v=..." />
+                    </div>
+                    <div class="button-group flex gap-8">
+                        <button id="add-video-btn" class="btn btn--secondary">Add Video</button>
+                        <button id="load-examples-btn" class="btn btn--outline">Load Examples</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video List Section -->
+            <section class="video-list-section card">
+                <div class="card__body">
+                    <div class="section-header flex justify-between items-center">
+                        <h2>Video Queue</h2>
+                        <div class="queue-controls">
+                            <button id="select-all-btn" class="btn btn--sm btn--outline">Select All</button>
+                            <button id="clear-queue-btn" class="btn btn--sm btn--outline">Clear Queue</button>
+                        </div>
+                    </div>
+                    <div id="video-list" class="video-list">
+                        <div class="empty-state">
+                            <p>No videos added yet. Add videos using the form above or load examples.</p>
+                        </div>
+                    </div>
+                    <div class="extraction-controls">
+                        <button id="extract-btn" class="btn btn--primary btn--full-width" disabled>
+                            Extract Transcripts
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress Section -->
+            <section id="progress-section" class="progress-section card hidden">
+                <div class="card__body">
+                    <h2>Extraction Progress</h2>
+                    <div id="overall-progress" class="progress-container">
+                        <div class="progress-label">Overall Progress</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <div class="progress-text">0 / 0 videos processed</div>
+                    </div>
+                    <div id="current-video-progress" class="progress-container">
+                        <div class="progress-label">Current Video</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <div class="progress-text">Waiting...</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="results-section" class="results-section card hidden">
+                <div class="card__body">
+                    <div class="section-header flex justify-between items-center">
+                        <h2>Extraction Results</h2>
+                        <div class="export-controls">
+                            <button id="download-all-btn" class="btn btn--primary btn--sm">Download All</button>
+                            <select id="export-format" class="form-control" style="width: auto; margin-left: 8px;">
+                                <option value="txt">TXT</option>
+                                <option value="csv">CSV</option>
+                                <option value="json">JSON</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="results-list" class="results-list">
+                        <!-- Results will be populated here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Information Panels -->
+            <section class="info-panels">
+                <div class="info-grid">
+                    <!-- Legal Considerations -->
+                    <div class="info-panel card">
+                        <div class="card__body">
+                            <h3>Legal Considerations</h3>
+                            <ul class="info-list">
+                                <li>Use for educational purposes only</li>
+                                <li>Respect copyright and intellectual property</li>
+                                <li>Do not redistribute without permission</li>
+                                <li>Contact content creators for extensive use</li>
+                                <li>Follow YouTube's Terms of Service</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Technical Tips -->
+                    <div class="info-panel card">
+                        <div class="card__body">
+                            <h3>Technical Tips</h3>
+                            <ul class="info-list">
+                                <li>Implement rate limiting (1-2 seconds between requests)</li>
+                                <li>Add proper error handling for missing transcripts</li>
+                                <li>Use appropriate file naming conventions</li>
+                                <li>Consider transcript quality (auto-generated vs manual)</li>
+                                <li>Handle network timeouts gracefully</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Extraction Methods -->
+                    <div class="info-panel card">
+                        <div class="card__body">
+                            <h3>Extraction Methods</h3>
+                            <div class="methods-list">
+                                <div class="method-item">
+                                    <h4>YouTube Native (Manual)</h4>
+                                    <p>Use YouTube's built-in transcript feature</p>
+                                    <div class="method-pros-cons">
+                                        <div class="pros">
+                                            <strong>Pros:</strong> Free, No technical skills required, Fully legal
+                                        </div>
+                                        <div class="cons">
+                                            <strong>Cons:</strong> Time-consuming, No bulk processing, Manual copy-paste
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="method-item">
+                                    <h4>Python Script (youtube-transcript-api)</h4>
+                                    <p>Programmatic extraction using Python library</p>
+                                    <div class="method-pros-cons">
+                                        <div class="pros">
+                                            <strong>Pros:</strong> Bulk processing, Free, Programmatic control
+                                        </div>
+                                        <div class="cons">
+                                            <strong>Cons:</strong> Requires Python knowledge, Rate limiting, May break with updates
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="method-item">
+                                    <h4>Web-based Tools</h4>
+                                    <p>Online services for transcript extraction</p>
+                                    <div class="method-pros-cons">
+                                        <div class="pros">
+                                            <strong>Pros:</strong> Easy to use, No installation, Some bulk features
+                                        </div>
+                                        <div class="cons">
+                                            <strong>Cons:</strong> Rate limits, Privacy concerns, Often require payment
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

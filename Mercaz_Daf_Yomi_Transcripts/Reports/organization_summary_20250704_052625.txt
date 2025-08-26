@@ -1,0 +1,20 @@
+CONTENT ORGANIZATION SUMMARY
+========================================
+
+Report Generated: 2025-07-04 05:26:25
+Base Directory: Mercaz_Daf_Yomi_Transcripts
+
+INVENTORY SUMMARY:
+--------------------
+Total Files: 0
+Total Size: 0.0 MB
+Tractates: 43
+
+VALIDATION SUMMARY:
+--------------------
+Files Checked: 0
+Properly Organized: 0
+Misplaced Files: 0
+Empty Directories: 210
+Duplicate Files: 0
+Corrupted Files: 0

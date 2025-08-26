@@ -1,0 +1,43 @@
+# Project Management System Requirements
+# Core Python packages for the project management system
+
+# No external dependencies required for core functionality
+# The system uses only Python standard library modules:
+# - os
+# - json
+# - shutil
+# - subprocess
+# - sys
+# - datetime
+# - pathlib
+# - typing
+# - argparse
+
+# Optional dependencies for enhanced functionality:
+
+# For advanced file operations (if needed)
+# pathlib2>=2.3.0  # Enhanced pathlib for older Python versions
+
+# For colored terminal output (optional enhancement)
+# colorama>=0.4.4
+# termcolor>=1.1.0
+
+# For configuration file validation (optional enhancement)
+# jsonschema>=3.2.0
+
+# For advanced logging (optional enhancement)
+# structlog>=21.1.0
+
+# External tools required (not Python packages):
+# - git (for version control)
+# - gh (GitHub CLI) - for GitHub integration
+#   Install from: https://cli.github.com/
+
+# Installation instructions:
+# 1. Ensure Python 3.8+ is installed
+# 2. Install GitHub CLI: https://cli.github.com/
+# 3. Authenticate with GitHub: gh auth login
+# 4. Run: python setup_youtube_project.py
+
+# Note: The core system works without any pip installations
+# All functionality uses Python standard library only

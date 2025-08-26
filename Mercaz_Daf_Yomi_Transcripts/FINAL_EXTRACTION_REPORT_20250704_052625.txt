@@ -1,0 +1,58 @@
+MERCAZ DAF YOMI - FINAL EXTRACTION REPORT
+==================================================
+
+Extraction completed: 2025-07-04 05:26:25
+Output directory: Mercaz_Daf_Yomi_Transcripts
+
+FILE SUMMARY:
+---------------
+Transcript files (.txt): 1
+JSON files: 2
+CSV files: 0
+Total content size: 0.0 MB
+
+DIRECTORY STRUCTURE:
+--------------------
+Arachin: 0 files
+Avodah_Zarah: 0 files
+Bava_Basra: 0 files
+Bava_Kamma: 0 files
+Bava_Metzia: 0 files
+Bechorot: 0 files
+Beitzah: 0 files
+Berachos: 0 files
+Chagigah: 0 files
+Chullin: 0 files
+Eruvin: 0 files
+Gittin: 0 files
+Horayos: 0 files
+Kerisos: 0 files
+Kesubos: 0 files
+Kiddushin: 0 files
+Kinnim: 0 files
+logs: 0 files
+Makkos: 0 files
+Megillah: 0 files
+Meilah: 0 files
+Menachos: 0 files
+Midos: 0 files
+Moed_Katan: 0 files
+Nazir: 0 files
+Nedarim: 0 files
+Niddah: 0 files
+Pesachim: 0 files
+Rosh_Hashanah: 0 files
+Sanhedrin: 0 files
+Shabbos: 0 files
+Shekalim: 0 files
+Shevuos: 0 files
+Sotah: 0 files
+Special_Series: 0 files
+Sukkah: 0 files
+Taanis: 0 files
+Tamid: 0 files
+Temurah: 0 files
+Unclassified: 0 files
+Yevamos: 0 files
+Yoma: 0 files
+Zevachim: 0 files
