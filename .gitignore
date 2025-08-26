@@ -125,6 +125,16 @@ tmp/
 
 # Large data files
 *.csv
-*.json
 *.xlsx
 *.pdf
+
+# JSON files (but allow config files)
+*.json
+!config.json
+!package.json
+
+# Project specific files
+extraction_progress.json
+master_catalog.csv
+extraction_summary.txt
+transcript_extraction_results.csv

@@ -22,6 +22,10 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 import requests
 
+# Load environment variables
+from dotenv import load_dotenv
+load_dotenv()
+
 class MercazDafYomiExtractor:
     """Enhanced YouTube transcript extractor for Mercaz Daf Yomi channel."""
     
@@ -44,7 +48,7 @@ class MercazDafYomiExtractor:
                 self.logger.warning(f"Failed to initialize YouTube API: {e}")
     
     def load_config(self, config_file: str) -> Dict:
-        """Load configuration from JSON file."""
+        """Load configuration from JSON file and environment variables."""
         default_config = {
             "youtube_api_key": "",
             "channel_handle": "@MercazDafYomi",
@@ -107,6 +111,25 @@ class MercazDafYomiExtractor:
         except Exception as e:
             print(f"Warning: Could not load config file {config_file}: {e}")
             print("Using default configuration")
+        
+        # Override with environment variables (takes precedence for security)
+        env_overrides = {
+            "youtube_api_key": os.getenv("YOUTUBE_API_KEY"),
+            "channel_handle": os.getenv("CHANNEL_HANDLE"),
+            "output_directory": os.getenv("OUTPUT_DIRECTORY"),
+            "batch_size": os.getenv("BATCH_SIZE"),
+            "rate_limit_seconds": os.getenv("RATE_LIMIT_SECONDS")
+        }
+        
+        for key, value in env_overrides.items():
+            if value is not None:
+                if key in ["batch_size", "rate_limit_seconds"]:
+                    try:
+                        default_config[key] = int(value)
+                    except ValueError:
+                        print(f"Warning: Invalid integer value for {key}: {value}")
+                else:
+                    default_config[key] = value
         
         return default_config
     

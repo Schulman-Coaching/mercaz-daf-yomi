@@ -32,6 +32,7 @@ tqdm>=4.65.0
 
 # Configuration management
 pyyaml>=6.0
+python-dotenv>=1.0.0
 
 # Optional: For advanced text processing
 nltk>=3.8.0
